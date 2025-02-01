@@ -7,7 +7,7 @@ import { schemaTypes } from "./schema";
 export const sanityConfig = defineConfig({
 name:"default",
 title:"studio",
-projectId:process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "",
+projectId:process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "uoanafo6",
 dataset:"production",
 plugins:[structureTool(), visionTool()],
 basePath:"/studio",
