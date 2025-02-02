@@ -95,6 +95,7 @@
 .image img{
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 div.top-content, div.bottom-content{
   width: 100%;
@@ -162,8 +163,9 @@ div.top-content, div.bottom-content{
 }
 .trending-section .features-main, .popular-section .features-main{
   padding: 30px 0;
+  width: 100%;
 }
-.big-feature{
+.popular-section .features-main .feature-single:nth-child(1){
   width: 47%;
 }
 .popular-section{
@@ -175,7 +177,10 @@ div.top-content, div.bottom-content{
   align-items: center;
   flex-direction: column;
 }
-
+.trending-section .image, .popular-section .image{
+  width: 100%;
+  height: 300px;
+}
 .popular-section .features-heading, .trending-section .features-heading{
   align-self: flex-start;
 }
@@ -380,9 +385,13 @@ p.quantity{
   color: #CAC6DA;
 }
 p.quantity span{
+  cursor: pointer;
+}
+p.quantity span.quantity-num{
   margin: 0 30px;
   color: #2A254B;
   font-family: "Satoshi";
+  cursor: default;
 }
 .amount .button{
   margin: 0;
@@ -397,7 +406,7 @@ p.quantity span{
 }
 .listing-section .trending-section .image{
   width: 100%;
-  height: 100%;
+  height: 300px;
 }
 .cta-section.listing-section .newsLetter-inn .content{
   width: 100%;
@@ -429,6 +438,23 @@ p.quantity span{
   align-items: center;
   width: 60%;
 }
+.left-side{
+  justify-content: flex-start;
+  padding: 40px 0 20px;
+  column-gap: 30px;
+}
+.left-side select.naming{
+  width: 100%;
+  background-color: transparent;
+}
+.left-side select.naming:focus{
+  outline: none;
+  border: none;
+}
+.left-side .names{
+  background-color: rgba(0, 0, 0, 0.04);
+  padding: 10px 15px;
+}
 .names{
   width: 25%;
   color: #2A254B;
@@ -457,6 +483,9 @@ p.quantity span{
   width: 100%;
   justify-content: center;
 }
+.products .features-main{
+  row-gap: 30px;
+}
 .responsive-category .right-side .names{
   width: 40%;
 }
@@ -467,7 +496,7 @@ p.quantity span{
   padding: 0;
 }
 .main-products{
-  padding: 20px 0;
+  padding: 0px 0 20px;
 }
 .cart-section{
   background-color: #f9f9f9;

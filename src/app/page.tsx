@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Hero />
       <Features />
-      <Trending titleName="New ceramics" image1="/images/product1.svg" image2="/images/product2.svg" image3="/images/product3.svg"  image4="/images/product4.svg"  />
+      <Trending titleName="New ceramics" />
       <PopularProducts />
       <Newsletter />
       <Cta />

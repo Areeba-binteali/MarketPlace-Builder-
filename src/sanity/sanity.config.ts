@@ -12,6 +12,7 @@ export const sanityConfig = defineConfig({
   title: "studio",
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  apiVersion: "2022-03-07", 
   plugins: [structureTool(), visionTool()],
   basePath: "/studio",
   schema: { types: schemaTypes },

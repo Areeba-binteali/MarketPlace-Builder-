@@ -1,51 +1,51 @@
-import Image from "next/image"
-import Link from "next/link"
+"use client"
+import { getAllProducts } from "@/sanity/sanity.query";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-export default function Trending({titleName,image1,image2,image3,image4}:any) {
-  return (
-   <section className="trending-section">
-    <div className="container">
-        <h2 className="features-heading">{titleName}</h2>
-        <div className="features-main">
-            <div className="feature-single">
-                <Link href="/product-listing">
-                <div className="image">
-                <Image src={image1} width="100" height="100" alt="products"></Image>
+export default function Trending({ titleName}: any) {
+    const [products, setProducts] = useState<any[]>([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const fetchedProducts = await getAllProducts();
+            setProducts(fetchedProducts.slice(0, 4));
+        }
+
+        fetchData();
+    }, []);
+
+    return (
+        <section className="trending-section">
+            <div className="container">
+                <h2 className="features-heading">{titleName}</h2>
+                <div className="features-main">
+                    {products && products.length > 0 ? (
+                        products.map((product: any) => (
+                            <div key={product._id} className="feature-single">
+                                <Link href={`/products/${product.slug}`}>
+                                    <div className="image">
+                                        <Image
+                                            src={product.image}
+                                            width="100"
+                                            height="100"
+                                            alt={product.name}
+                                        />
+                                    </div>
+                                    <h3 className="feature-title">{product.name}</h3>
+                                    <p className="feature-description">£{product.price}</p>
+                                </Link>
+                            </div>
+                        ))
+                    ) : (
+                        <p>No products available</p>
+                    )}
                 </div>
-                <h3 className="feature-title">The Dandy chair</h3>
-                <p className="feature-description">£250</p>
-                </Link>
+                <span className="button">
+                    <Link href="/products">View collection</Link>
+                </span>
             </div>
-            <div className="feature-single">
-                <Link href="/product-listing">
-                <div className="image">
-                <Image src={image2} width="100" height="100" alt="products"></Image>
-                </div>
-                <h3 className="feature-title">Rustic Vase Set</h3>
-                <p className="feature-description">£155</p>
-                </Link>
-            </div>
-            <div className="feature-single">
-                <Link href="/product-listing">
-                <div className="image">
-                <Image src={image3} width="100" height="100" alt="products"></Image>
-                </div>
-                <h3 className="feature-title">The Silky Vase</h3>
-                <p className="feature-description">£125</p>
-                </Link>
-            </div>
-            <div className="feature-single">
-                <Link href="/product-listing">
-                <div className="image">
-                <Image src={image4} width="100" height="100" alt="products"></Image>
-                </div>
-                <h3 className="feature-title">The Lucy Lamp</h3>
-                <p className="feature-description">£399</p>
-                </Link>
-            </div>
-        </div>
-        <span className="button"><Link href="/products">View collection</Link></span>
-    </div>
-   </section>
-  )
+        </section>
+    );
 }
