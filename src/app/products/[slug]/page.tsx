@@ -3,7 +3,6 @@ import Image from "next/image";
 import Trending from "@/components/trending";
 import Newsletter from "@/components/newsletter";
 import Features from "@/components/features";
-import { useState } from "react";
 import Quantity from "@/components/quantity";
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
@@ -71,14 +70,20 @@ export default async function ProductPage({ params }: { params: { slug: string }
                           <Quantity />
                           </div>
                           <div className="addToCart">
-                            <span className="button">Add To Cart</span>
+                            <button className="snipcart-add-item button"
+  data-item-id={product._id}
+  data-item-price={product.price}
+  data-item-description={product.description}
+  data-item-url={`/products/${product.slug}`}
+  data-item-image={product.image}
+  data-item-name={product.name}>Add To Cart</button>
                           </div>
                           </div>
                           </div>
                         </div>
                       </div>
                       <div className="trendingProducts">
-                      <Trending titleName="You might also like" image1="/images/product1.svg" image2="/images/product2.svg" image3="/images/product3.svg"  image4="/images/product4.svg"  />
+                      <Trending titleName="You might also like"/>
                       </div>
                       <div className="featuresPoints">
                         <Features />

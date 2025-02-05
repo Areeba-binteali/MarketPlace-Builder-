@@ -62,6 +62,7 @@ export async function getProductById(slug: string) {
   console.log("Fetching product with slug:", slug); // 👈 Ye log add karo
   const query = `*[_type == "product" && slug.current == $slug][0]{
      "image": image.asset->url,
+     _id,
      name,
      price,
      description,

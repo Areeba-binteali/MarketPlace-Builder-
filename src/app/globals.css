@@ -421,6 +421,9 @@ p.quantity span.quantity-num{
   font-size: 36px;
   font-family: "ClashDisplay";
 }
+.snipcart-test-banner {
+  display: none;
+}
 .names span{
   display: flex;
   justify-content: center;
@@ -602,14 +605,89 @@ p.quantity span.quantity-num{
   align-items: center;
   height: 60vh;
 }
-.entry-title{
+.snipcart-cart__secondary-header-title, .entry-title{
   color: #2A254B;
   font-family: "ClashDisplay";
   font-size: 36px;
 }
-
-
-
+.snipcart-cart__secondary-header-title{
+  font-size: 20px;
+  color: #fff;
+}
+.snipcart-base-button {
+  background-color: #2A254B;
+  color: #fff;
+  border-radius: 0px;
+}
+.snipcart-base-button:hover {
+  background-color: #2A254B;
+  color: #fff;
+}
+.snipcart__icon--medium{
+  width: 35px;
+  height: 35px;
+  color: #fff;
+}
+.snipcart-summary-fees__amount, .snipcart-item-quantity__total-price,.snipcart-summary-fees__title--highlight, .snipcart-base-button__label{
+  font-family: "Satoshi";
+}
+.snipcart-summary-fees{
+  font-family: "Inter";
+}
+.snipcart-empty-cart .snipcart-empty-cart__title, .snipcart-item-line__title, .snipcart-item-quantity__label{
+  color: #2A254B;
+  font-family: "ClashDisplay";
+  font-weight: 400;
+}
+.snipcart-button-link{
+  color: #2A254B;
+  font-family: "Inter";
+  font-weight: 400;
+  text-decoration: underline;
+  border-bottom: none !important;
+}
+.snipcart-button-link:hover{
+  color: #2A254B;
+  background-color: transparent;
+  box-shadow: none;
+}
+.snipcart-cart__secondary-header{
+  background-color: #2A254B;
+}
+.snipcart-layout__content--side {
+  background-color: #f9f9f9;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+.snipcart-cart__content{
+  background-color: #f9f9f9 !important;
+}
+.snipcart-item-line, .snipcart-cart--edit .snipcart-item-list, .snipcart-cart__footer{
+  background-color: transparent !important;
+}
+.snipcart-modal__container{
+  padding: 0 !important;
+}
+.snipcart-button-icon.is-danger, .snipcart-button-icon.is-danger:hover{
+  background-color: #2A254B;
+  color: #fff;
+}
+.snipcart-item-quantity__quantity .snipcart-button-icon, .snipcart-item-quantity__quantity .snipcart-button-icon:hover{
+  color: #2A254B;
+  background-color: transparent;
+  box-shadow: none;
+}
+button, span.button{
+  transition: 0.3s;
+}
+button:hover{
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+span.button:hover{
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+.snipcart-item-quantity__quantity, .snipcart-item-quantity__quantity:hover{
+  border: none;
+}
 
 
 

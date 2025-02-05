@@ -4,7 +4,9 @@ import { CiSearch } from "react-icons/ci";
 import { HiBars4 } from "react-icons/hi2";
 import Link from "next/link";
 
+
 export default function Header() {
+    
   return (
     <section className="header-main">
         <div className="container1">
@@ -19,7 +21,7 @@ export default function Header() {
                 </div>
                 <div className="cart-user">
                     <div className="icon">
-                        <Link href="/cart"><PiShoppingCartThin /></Link>
+                        <Link href="#" className="snipcart-checkout"><PiShoppingCartThin /></Link>
                     </div>
                     <div className="icon">
                         <HiOutlineUserCircle />
