@@ -33,7 +33,7 @@ export default function RootLayout({
           modalStyle: "side",
       };
       (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;
-      (S=(s=window.SnipcartSettings).currency)!=null||(s.currency="usd");
+      (S=(s=window.SnipcartSettings).currency)!=null||(s.currency="gbp");
       var l,p;(p=(l=window.SnipcartSettings).timeoutDuration)!=null||(l.timeoutDuration=2750);
       var w,u;(u=(w=window.SnipcartSettings).domain)!=null||(w.domain="cdn.snipcart.com");
       var m,g;(g=(m=window.SnipcartSettings).protocol)!=null||(m.protocol="https");
