@@ -851,6 +851,27 @@ ul.snipcart-typeahead__suggestions, .snipcart-cart-summary-item, .snipcart-summa
 .snipcart-cart-summary__footer{
   display: none;
 }
+.snipcart-order__details-title h1{
+    font-family: "ClashDisplay";
+    font-weight: 400;
+    font-size: 24px;
+}
+..snipcart-order__details{
+    max-width: 700px !important;
+}
+.snipcart-order__details .snipcart__icon{
+    color: #2a254b !important;
+}
+.snipcart-order__details, .snipcart-cart-summary-expanded-item__quantity{
+    font-family: "Satoshi"
+}
+.snipcart-order__box__header .snipcart__icon{
+    color: #fff !important;
+}
+.snipcart-order__invoice-number--highlight{
+    color: #726e8d !important;
+}
+
 
 
 
