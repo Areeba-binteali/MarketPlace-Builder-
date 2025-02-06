@@ -687,7 +687,179 @@ span.button:hover{
 }
 .snipcart-item-quantity__quantity, .snipcart-item-quantity__quantity:hover{
   border: none;
+  box-shadow: none !important;
 }
+.snipcart-modal__container, .snipcart-layout.snipcart-modal, .snipcart-cart-header, .snipcart__box--gray {
+  background-color: #f9f9f9
+}
+.snipcart-cart-header__close-button, .snipcart-cart-header__close-button .snipcart-modal__close-icon{
+  color: #2A254B;
+  font-family: "Satoshi";
+  text-decoration: underline;
+}
+.snipcart-cart-header__title{
+  font-size: 20px;
+  font-family: "ClashDisplay";
+  font-weight: 400;
+  color: #2A254B;
+  text-transform: capitalize;
+}
+.snipcart-item-line__image{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+.snipcart-item-line{
+  box-shadow: none;
+  border-bottom: 1px solid #ccc;
+}
+.snipcart-item-line__media{
+  height: 110px;
+  width: 230px;
+}
+.snipcart-item-line__media--small{
+  height: 60px;
+  width: 80px;
+}
+.snipcart-item-description{
+  color: #726E8D;
+  font-family: "Satoshi";
+  font-size: 15px;
+}
+.snipcart-item-line--cart-edit .snipcart-item-line__image{
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+.snipcart-cart-header__option, .snipcart-cart-header__option svg{
+  color: #2A254B;
+}
+.snipcart-cart-header__option:hover, .snipcart-cart-header__close-button:hover{
+  background-color: transparent;
+  box-shadow: none;
+}
+.snipcart-summary-fees__notice{
+  margin-bottom: 24px;
+}
+.snipcart-cart__featured-payment-methods-container{
+  display: none;
+}
+.snipcart-cart__footer{
+  padding-bottom: 140px !important;
+}
+.snipcart-cart-summary-side .snipcart-cart__footer{
+  padding: 32px !important;
+}
+#snipcart-billing-form{
+  width: 100%
+}
+.snipcart__box--badge.snipcart__box--badge {
+  background-color: #2A254B;
+  color: #fff;
+  margin-left: 0 !important;
+  border: none !important;
+  margin-right: 20px;
+}
+.snipcart__box--title h1, .snipcart-cart-summary__title{
+  color: #2A254B;
+  font-family: "ClashDisplay";
+  font-weight: 400;
+  font-size: 24px;
+}
+.snipcart-form__field label, .snipcart-form__field input {
+  color: #2A254B;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14px;
+}
+.snipcart-form__set{
+  margin-top: 40px;
+}
+.snipcart-form__field input, .snipcart-form__select{
+    background-color: #fff !important;
+    border: 1px solid #2a254b4b !important;
+    box-shadow: none !important;
+    transition: 0.3s;
+}
+.snipcart-form__field input:hover, .snipcart-form__field input:focus, .snipcart-form__select:hover, .snipcart-form__select:focus{
+    border-color: #2A254B !important;
+}
+.snipcart-input{
+    border: none !important;
+    box-shadow: none !important;
+}
+.snipcart-form__select input{
+  border: none !important;
+  outline: none !important;
+}
+.snipcart-form__select-wrapper:focus-within .snipcart__icon{
+  color: #2A254B;
+}
+ul.snipcart-typeahead__suggestions, .snipcart-cart-summary-item, .snipcart-summary-fees {
+  color: #2a254b;
+  font-family: "Satoshi";
+  font-size: 15px;
+  border-color: #2a254b;
+}
+.snipcart-cart-summary-item, .snipcart-summary-fees {
+  color: #726E8D;
+}
+.snipcart-cart-summary-items-list{
+  margin-top: 30px;
+}
+.snipcart-typeahead__suggestion--active{
+  background-color: #2a254b5d;
+}
+.snipcart-field-error{
+  color: red;
+  font-family: "Satoshi";
+  font-weight: 400;
+  font-size: 14px;
+}
+.snipcart-billing-completed__information,.snipcart-shipping-completed__information, .snipcart-shipping-completed__step-icon, .snipcart-billing-completed__step-icon{
+  color: #2A254B !important;
+}
+.snipcart-billing-completed__information, .snipcart-shipping-completed__information{
+  font-family: "Satoshi";
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.snipcart-payment, .snipcart-form{
+  width: 100%;
+}
+#snipcart-payment-form fieldset legend[data-translation-inner="card_label"], #snipcart-payment-form .test-card-hint, #snipcart-payment-form p{
+  font-family: "Satoshi" !important; 
+  font-size: 28px !important;
+}
+.snipcart-shipping-address--readonly {
+  font-family: "Satoshi" !important;
+  text-transform: capitalize;
+  font-size: 15px;
+  margin-top: 20px;
+}
+.snipcart-shipping-rates-list-item, .snipcart-form-radio+label:before{
+  border-color: #2a254b4b !important;
+}
+.snipcart-shipping-rates-list-item--highlight, .snipcart-shipping-rates-list-item:focus-within{
+  border-color: #2A254B !important;
+}
+.snipcart-form-radio:checked+label:before{
+  background-color: #2a254b;
+  border-color: #2a254b;
+}
+.snipcart-cart-summary__footer{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
 
 
 

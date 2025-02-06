@@ -1,11 +1,45 @@
+"use client"
 import { HiOutlineUserCircle } from "react-icons/hi2";
 import { PiShoppingCartThin } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
 import { HiBars4 } from "react-icons/hi2";
 import Link from "next/link";
+import { useEffect } from "react";
 
 
 export default function Header() {
+    useEffect(() => {
+        const applyCustomization = () => {
+          if (window.Snipcart) {
+            window.Snipcart.api.theme.customization.registerPaymentFormCustomization({
+              input: {
+                backgroundColor: "red",
+                color: "#303030",
+                border: "1px solid black",
+                fontSize: "16px",
+                placeholder: {
+                  color: "blue",
+                },
+              },
+              label: {
+                color: "#fff",
+                fontSize: "20px",
+              },
+            });
+          }
+        };
+    
+        // Ensure Snipcart is loaded before applying customization
+        if (window.Snipcart) {
+          applyCustomization();
+        } else {
+          document.addEventListener("snipcart.ready", applyCustomization);
+        }
+    
+        return () => {
+          document.removeEventListener("snipcart.ready", applyCustomization);
+        };
+      }, []);
     
   return (
     <section className="header-main">
