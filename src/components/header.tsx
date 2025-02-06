@@ -13,17 +13,16 @@ export default function Header() {
           if (window.Snipcart) {
             window.Snipcart.api.theme.customization.registerPaymentFormCustomization({
               input: {
-                backgroundColor: "red",
-                color: "#303030",
-                border: "1px solid black",
+                color: "#2a254b",
+                border: "1px solid #2a254b !important",
                 fontSize: "16px",
                 placeholder: {
-                  color: "blue",
+                  color: "#2a254b",
                 },
               },
               label: {
-                color: "#fff",
-                fontSize: "20px",
+                color: "#2a254b",
+                fontSize: "16px !important",
               },
             });
           }

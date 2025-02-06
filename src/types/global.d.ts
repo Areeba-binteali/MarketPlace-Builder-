@@ -8,7 +8,6 @@ declare global {
           customization: {
             registerPaymentFormCustomization: (options: {
               input: {
-                backgroundColor?: string;
                 color?: string;
                 border?: string;
                 fontSize?: string;
