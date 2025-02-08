@@ -1,7 +1,7 @@
-import NextAuth, { NextAuthOptions } from "next-auth";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-export const authOptions: NextAuthOptions = {
+const handler = NextAuth({
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -16,7 +16,7 @@ export const authOptions: NextAuthOptions = {
         const validPassword = process.env.ADMIN_PASSWORD;
 
         if (credentials.email === validEmail && credentials.password === validPassword) {
-          return { id: "1", email: validEmail, role: "admin" }; 
+          return { id: "1", email: validEmail, role: "admin" };
         } else {
           throw new Error("Invalid email or password");
         }
@@ -40,7 +40,7 @@ export const authOptions: NextAuthOptions = {
       return session;
     }
   }
-};
+});
 
-const handler = NextAuth(authOptions);
+// ✅ Correctly export for Next.js App Router
 export { handler as GET, handler as POST };
