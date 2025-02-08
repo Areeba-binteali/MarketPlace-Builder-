@@ -7,8 +7,8 @@ const nextConfig = {
     async rewrites() {
       return [
         {
-          source: "/:path*",
-          destination: "/public/:path*",
+          source: "/public/:path*",
+          destination: "/:path*", // Public folder exclude kar raha hai
         },
       ];
     },
