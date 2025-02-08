@@ -845,7 +845,7 @@ ul.snipcart-typeahead__suggestions, .snipcart-cart-summary-item, .snipcart-summa
   border-color: #2A254B !important;
 }
 .snipcart-form-radio:checked+label:before{
-  background-color: #2a254b;
+  background-color: #39393f;
   border-color: #2a254b;
 }
 .snipcart-cart-summary__footer{
@@ -856,7 +856,7 @@ ul.snipcart-typeahead__suggestions, .snipcart-cart-summary-item, .snipcart-summa
     font-weight: 400;
     font-size: 24px;
 }
-..snipcart-order__details{
+.snipcart-order__details{
     max-width: 700px !important;
 }
 .snipcart-order__details .snipcart__icon{
@@ -871,6 +871,106 @@ ul.snipcart-typeahead__suggestions, .snipcart-cart-summary-item, .snipcart-summa
 .snipcart-order__invoice-number--highlight{
     color: #726e8d !important;
 }
+.signIn-inputs{
+  font-size: 16px;
+  padding: 10px 15px;
+  font-family: "Satoshi";
+  outline: none !important;
+  color: #2A254B;
+  border: 1px solid #2a254b4b;
+  margin-bottom: 15px;
+}
+.signIn-inputs:focus{
+  border-color: #2A254B;
+}
+.signIn-btn{
+  background-color: #2A254B;
+  color: #fff;
+  font-family: "Satoshi";
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+body.admin-pannel{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBE8F4;
+}
+.signIn-form{
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  width: 40%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-head{
+  text-align: center;
+  font-family: "ClashDisplay";
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.dashboard-main{
+  background-color: #fff;
+  padding: 80px 40px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  color: #2A254B;
+  text-align: center;
+  font-family: "Satoshi";
+}
+.dashboard-main h1{
+  font-size: 34px;
+  font-family: "ClashDisplay";
+  margin-bottom: 10px;
+}
+.dashboard-main h3{
+  font-size: 20px;
+}
+.adminHeader{
+  position: fixed;
+  font-family: "ClashDisplay";
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #2A254B;
+  color: #fff;
+  padding: 15px 10px;
+}
+#sanity{
+  position: relative;
+  top: 56px;
+  width: 100%;
+  background-color: transparent;
+}
+#sanity * {
+  background-color: transparent !important;
+}
+.SigninPage .adminHeader{
+  display: none;
+}
+.dashboard-main a{
+  display: inline-block;
+  background-color: #2A254B;
+  color: #fff;
+  padding: 15px 40px;
+  margin: 30px 0 10px 0;
+}
+.dashboard-main span{
+  display: block;
+  text-decoration: underline;
+}
+
+
 
 
 

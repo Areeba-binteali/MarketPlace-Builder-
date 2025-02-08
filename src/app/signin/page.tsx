@@ -1,15 +1,31 @@
 "use client"; 
 
 import { signIn } from "next-auth/react";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function SignIn() {
+  const router = useRouter();
+  const pathname = usePathname();
+ 
+  useEffect(() => {
+    const signInBody = document.querySelector("body");
+
+    if (pathname === "/signin") {
+      signInBody?.classList.add("SigninPage");
+    } else {
+      signInBody?.classList.remove("SigninPage");
+    }
+
+    return () => {
+      signInBody?.classList.remove("SigninPage");
+    };
+  }, [pathname]); 
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,14 +44,15 @@ export default function SignIn() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col space-y-4 max-w-sm mx-auto">
+    <form onSubmit={handleSubmit} className="signIn-form">
+      <h1 className="login-head">Log In to your Account</h1>
       <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
         required
-        className="border p-2"
+        className="signIn-inputs"
       />
       <input
         type="password"
@@ -43,9 +60,9 @@ export default function SignIn() {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
         required
-        className="border p-2"
+        className="signIn-inputs"
       />
-      <button type="submit" className="bg-blue-500 text-white p-2">Sign in</button>
+      <button type="submit" className="signIn-btn">Sign in</button>
       {error && <p className="text-red-500">{error}</p>}
     </form>
   );

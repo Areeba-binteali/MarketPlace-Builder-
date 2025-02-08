@@ -20,7 +20,12 @@ const Dashboard = () => {
   if (status === "loading") return <p>Loading...</p>;
   if (!session || session.user?.role !== "admin") return null;
 
-  return <div>Admin Dashboard</div>;
+  return (
+    <div className="dashboard-main">
+      <h1>Hey Areeba!</h1>
+      <h3>Start managing your content through navigations above</h3>
+    </div>
+  );
 };
 
 export default Dashboard;

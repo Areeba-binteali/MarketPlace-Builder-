@@ -1,5 +1,6 @@
 "use client"
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -21,6 +22,11 @@ export default function SnipCart(){
   if (!session || session.user?.role !== "admin") return null;
   
     return(
-        <h1>This is snipcart</h1>
+      <div className="dashboard-main">
+        <h1>SnipCart Dashboard</h1>
+        <h3>Click the button below, to manage your orders and payments</h3>
+        <Link href="https://app.snipcart.com/dashboard/" target="_blank">Go to Dashboard</Link>
+        <span>Use the admin credentials to login</span>
+      </div>
     )
 }
