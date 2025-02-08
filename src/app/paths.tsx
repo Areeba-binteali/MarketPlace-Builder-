@@ -4,17 +4,15 @@ import AdminHeader from "@/components/adminHeader";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 
 export default function DecideLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
     const noLayoutPages = ['/signin', '/admin', '/admin/snipcart'];
 
-    // ✅ Check if path matches admin studio pattern
     const isAdminStudio = /^\/admin\/studio(\/.*)?$/.test(pathname);
     const isNoLayoutPage = noLayoutPages.includes(pathname) || isAdminStudio;
 
-    // ✅ Add class to body for admin pages
     useEffect(() => {
         const body = document.querySelector('body');
         if (isNoLayoutPage) {
@@ -24,7 +22,6 @@ export default function DecideLayout({ children }: { children: React.ReactNode }
         }
     }, [isNoLayoutPage]);
 
-    // ✅ Return the correct layout
     if (isNoLayoutPage) {
         return (
             <>
