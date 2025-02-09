@@ -16,4 +16,30 @@ export const sanityConfig = defineConfig({
   plugins: [structureTool(), visionTool()],
   basePath: "/admin/studio",
   schema: { types: schemaTypes },
+  auth: {
+    redirectOnSingle: false,
+    mode: 'replace',
+    providers: [
+      /*
+      {
+        name: 'google', 
+        title: 'Google', 
+        url: 'https://api.sanity.io/v1/auth/login/google'
+      },
+      
+      {
+        name: 'github',
+        title: 'GitHub',
+        url: 'https://api.sanity.io/v1/auth/login/github'
+      },
+       */
+      {
+        name: 'sanity',
+        title: 'E-mail / password',
+        url: 'https://api.sanity.io/v1/auth/login/sanity',
+      }, 
+     
+    
+    ],
+  }
 });
