@@ -891,7 +891,7 @@ ul.snipcart-typeahead__suggestions, .snipcart-cart-summary-item, .snipcart-summa
   text-transform: capitalize;
   font-size: 18px;
 }
-body.admin-pannel{
+body.admin-panel{
   min-height: 100vh;
   display: flex;
   justify-content: center;
