@@ -946,15 +946,29 @@ body.admin-panel{
   background-color: #2A254B;
   color: #fff;
   padding: 15px 10px;
+  z-index: 9999;
 }
 #sanity{
   position: relative;
-  top: 56px;
+  top: 34px;
   width: 100%;
   background-color: transparent;
 }
+#sanity[data-ui="NextStudioLayout"]{
+  max-height: calc(100vh - 56px) !important;
+  height: calc(100vh - 56px) !important;
+  min-height: fit-content !important;
+}
 #sanity * {
   background-color: transparent !important;
+  border-color: #2A254B !important;
+  color: #2A254B !important;
+}
+#sanity *:before{
+  background-color: #2A254B;
+}
+#sanity *:after{
+  border-color: #2A254B;
 }
 .SigninPage .adminHeader{
   display: none;
@@ -970,7 +984,10 @@ body.admin-panel{
   display: block;
   text-decoration: underline;
 }
-
+#sanity form{
+  width: 100%;
+  margin: 0;
+}
 
 
 
